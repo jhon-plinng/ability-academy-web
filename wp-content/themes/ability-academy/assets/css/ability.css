@@ -255,7 +255,10 @@ body.ability .ab-team-teaser .elementor-heading-title em { color: var(--ab-fores
 }
 .ab-logo { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: inherit; }
 .ab-logo__mark { width: 46px; height: auto; display: block; }
-.ab-logo__img { max-height: 54px; width: auto; display: block; }
+body.ability .ab-logo__img { height: 44px; width: auto; display: block; transition: transform .5s var(--ab-ease); }
+.ab-logo:hover .ab-logo__img { transform: rotate(-4deg) scale(1.05); }
+body.ability .ab-logo--footer .ab-logo__img { height: 64px; }
+body.ability .ab-loader__logo { width: 120px; height: auto; margin-bottom: 18px; display: block; }
 .ab-logo__text { font-family: var(--ab-serif); font-size: 1.05rem; line-height: .95; letter-spacing: -.02em; }
 .ab-logo__text em { font-style: italic; color: var(--ab-green); }
 .ab-dark-top .ab-header:not(.is-scrolled) .ab-logo__text em { color: var(--ab-mint); }
@@ -321,6 +324,7 @@ body.ability .ab-team-teaser .elementor-heading-title em { color: var(--ab-fores
 @media (max-width: 560px) {
 	.ab-header__actions .ab-btn { display: none; }
 	.ab-logo__mark { width: 40px; }
+	body.ability .ab-logo__img { height: 38px; }
 }
 
 /* ---------- Hero ---------- */

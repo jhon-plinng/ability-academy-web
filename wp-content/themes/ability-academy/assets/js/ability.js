@@ -118,7 +118,8 @@
 			intro.to(loader, { autoAlpha: 0, duration: 0.45, ease: 'power2.out' });
 		} else {
 			intro
-				.from('.ab-loader__word', { yPercent: 120, duration: 1, stagger: 0.12, ease: ease })
+				.from('.ab-loader__logo', { autoAlpha: 0, scale: .6, rotate: -8, duration: 1, ease: 'back.out(1.7)' })
+				.from('.ab-loader__word', { yPercent: 120, duration: 1, stagger: 0.12, ease: ease }, '-=.6')
 				.to('.ab-loader__bar i', { scaleX: 1, duration: 0.9, ease: 'power3.inOut' }, '-=.5')
 				.to('.ab-loader__inner', { yPercent: -30, autoAlpha: 0, duration: 0.6, ease: 'power3.in' })
 				.to(loader, { clipPath: 'inset(0 0 100% 0)', duration: 0.9, ease: 'expo.inOut' }, '-=.2');
